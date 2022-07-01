@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alatsi&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200&display=swap');
+
+:root {
+  --background-color: #eeeeee;
+  --accent-color-white: #ffffff;
+  --accent-lt-blue: #ecfbff;
+  --accent-blue: #278dd6;
+  --accent-drk-blue: #0d5b92;
+  --accent-yellow: #fff268;
+  --accent-drk-yellow: #fee736;
+  --box-shadow-elements: 0 3px 7px #48a2e26b;
+  --box-shadow-header: 0 0 13px #48a2e299;
+  --text-shadow: 0 1px 5px #48a2e2;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overscroll-behavior: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Alatsi', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+  display: flex;
+  position: relative;
+  margin: auto;
+  padding: 0px 20px;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../images/sky.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-bottom: 2px solid #ffffff;
+  box-shadow: var(--box-shadow-header);
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 9999;
+  top: 0;
+}
+
+.logo {
+  font-size: 65px;
+  color: var(--accent-drk-blue);
+  margin-bottom: 30px;
+}
+
+#bee {
+  font-family: 'Mukta Vaani';
+  font-size: 72px;
+  text-shadow: var(--text-shadow);
+  color: #fff268;
+}
+
+.subhead {
+  position: absolute;
+  top: 100px;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: 'Roboto Condensed';
+  text-align: center;
+  color: var(--accent-drk-blue);
+}
+
+main {
+  margin: 40px auto;
+  width: 90%;
+}
+
+.card {
+  justify-content: center;
+  width: 375px;
+  margin: auto;
+  padding: 25px;
+  background-color: var(--accent-drk-blue);
+  border: 1px solid var(--accent-color-white);
+  box-shadow: var(--box-shadow-elements);
+  border-radius: 5px;
+}
+
+.card-header {
+  font-family: 'Alatsi';
+  color: var(--accent-drk-yellow);
+  font-size: 24px;
+  font-weight: bolder;
+  margin-bottom: 8px;
+}
+
+input {
+  font-family: 'Mukta Vaani';
+  width: 100%;
+  height: 36px;
+  margin-bottom: 12px;
+  border-radius: 3px;
+  padding: 0 13px;
+  border: none;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+input::placeholder {
+  color: #afafaf;
+}
+
+.btn {
+  width: 100%;
+  padding: 4px 0;
+  border: none;
+  border-radius: 3px;
+  background-color: var(--accent-drk-yellow);
+  font-family: 'Roboto Condensed';
+  color: var(--accent-drk-blue);
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--accent-yellow);
+}
+
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
