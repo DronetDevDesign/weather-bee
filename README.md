@@ -18,7 +18,7 @@ Purpose goes here.
   - 575px (Small devices - large cell phones)
 
 ## Website Link:
-https://dronetdevdesign.github.io/Dronet-DevDesign/
+https://dronetdevdesign.github.io/weather-bee/
 
 ## This Website Created Using:
 * JavaScript
