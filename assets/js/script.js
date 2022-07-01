@@ -1,15 +1,22 @@
-var key = "e0c79796705c396d02d89d49c8fdba43";
-var apiUrl = "https://api.openweathermap.org/data/2.5/weather?lat=35&lon=139&appid=e0c79796705c396d02d89d49c8fdba43";
+var apiUrl = "https://api.openweathermap.org/data/2.5/weather?appid=e0c79796705c396d02d89d49c8fdba43";
+ // dynamic value
+var cityUrl = "http://api.openweathermap.org/geo/1.0/direct?limit=5&appid=e0c79796705c396d02d89d49c8fdba43";
 
-fetch(apiUrl, {
-  "method": "GET",
-  "headers": {
+var searchForm = document.getElementById("user-search");
+var onSearchSubmit = function(event) {
+  event.preventDefault();
 
-    }
+var fData = new FormData(event.target);
+
+var city = fData.get("cityname");
+  fetch(cityUrl + "&q=" + city) 
+  .then(function(response) {
+    return response.json();
   })
   .then(function(response) {
-    console.log(response);
+    return response[0];
   })
-  .catch(function(error) {
-    console.log(error);
-});
+  .then(console.log);
+}
+
+searchForm.addEventListener("submit", onSearchSubmit);

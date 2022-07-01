@@ -8,10 +8,14 @@
   --accent-lt-blue: #ecfbff;
   --accent-blue: #278dd6;
   --accent-drk-blue: #0d5b92;
+  --accent-darker-blue: #00375f;
   --accent-yellow: #fff268;
   --accent-drk-yellow: #fee736;
   --box-shadow-elements: 0 3px 7px #48a2e26b;
   --box-shadow-header: 0 0 13px #48a2e299;
+  --box-shadow-black: 0 2px 6px #000000;
+  --background-image-gradient: linear-gradient(#0d5b92, #00375f);
+  --button-gradient: linear-gradient(#fff268, #fff268, #fee736);
   --text-shadow: 0 1px 5px #48a2e2;
 }
 
@@ -84,9 +88,8 @@ main {
   width: 375px;
   margin: auto;
   padding: 25px;
-  background-color: var(--accent-drk-blue);
+  background-image: var(--background-image-gradient);
   border: 1px solid var(--accent-color-white);
-  box-shadow: var(--box-shadow-elements);
   border-radius: 5px;
 }
 
@@ -121,14 +124,17 @@ input::placeholder {
   border-radius: 3px;
   background-color: var(--accent-drk-yellow);
   font-family: 'Roboto Condensed';
-  color: var(--accent-drk-blue);
+  color: var(--accent-darker-blue);
   font-size: 16px;
   font-weight: 400;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn:hover {
   background-color: var(--accent-yellow);
+  box-shadow: var(--box-shadow-black);
+  color: var(--accent-drk-blue);
 }
 
 .flex-row {
