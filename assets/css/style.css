@@ -55,6 +55,23 @@ header {
   top: 0;
 }
 
+#bee-icon {
+  position: relative;
+  width: 45px;
+  transform: rotate(75deg);
+  z-index: 5000;
+  top: -10px;
+  right: -337px;
+  opacity: 55%;
+}
+
+.logo-container {
+  margin: 0;
+  text-align: center;
+  position: relative;
+  left: -40px;
+}
+
 .logo {
   font-size: 65px;
   color: var(--accent-drk-blue);
@@ -119,13 +136,13 @@ input::placeholder {
 
 .btn {
   width: 100%;
-  padding: 4px 0;
+  padding: 5px 0;
   border: none;
   border-radius: 3px;
   background-color: var(--accent-drk-yellow);
   font-family: 'Roboto Condensed';
   color: var(--accent-darker-blue);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -134,7 +151,7 @@ input::placeholder {
 .btn:hover {
   background-color: var(--accent-yellow);
   box-shadow: var(--box-shadow-black);
-  color: var(--accent-drk-blue);
+  letter-spacing: 0.5px;
 }
 
 .flex-row {
