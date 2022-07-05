@@ -24,7 +24,7 @@ var onSearchSubmit = function(event) {
       .then(function(data) {
 
 // ******** date goes hear ********
-  var date = dayjs().format("dddd, MM/DD/YYYY").toString();
+  var date = dayjs(date).format("dddd, MM/DD/YYYY").toString();
   document.getElementById("current-date").innerText = date; 
 
         console.log(data.main);
