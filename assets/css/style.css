@@ -9,6 +9,7 @@
   --accent-color-white: #ffffff;
   --accent-transparent-white: #ffffffd1;
   --accent-lt-blue: #ecfbff;
+  --pale-blue: #9be8ff;
   --accent-lighter-blue: #b2eafd;
   --accent-blue: #66b7d0;
   --accent-md-blue: #2077b6;
@@ -24,6 +25,7 @@
   --background-body-gradient: linear-gradient(#ffffff, #ffffff, #ffffff, #ffffff, #ecfbff, #c7f3ff);
   --button-gradient: linear-gradient(#fff268, #fff268, #fee736);
   --text-shadow: 0 3px 3px #0064ac6e;
+  --weather-circle-gradient: linear-gradient(#c7f3ff, #7ae0ff);
 }
 
 * {
@@ -72,7 +74,9 @@ header {
   z-index: 5000;
   top: -19px;
   right: -373px;
-  opacity: 75%;
+  opacity: 85%;
+  -webkit-filter: drop-shadow(0 3px 3px #0064ac6e);
+  filter: drop-shadow(0 3px 1px #0064ac80);
 }
 
 .logo-container {
@@ -175,8 +179,20 @@ input::placeholder {
   padding: 10px 15px;
 }
 
+#heading-icon-container {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .main-heading {
   font-size: 24px;
+}
+
+#main-icon > img {
+  width: 50px;
 }
 
 #section-one-results {
@@ -185,7 +201,7 @@ input::placeholder {
   background-image: var(--background-lt-blue-gradient);
   border-radius: 5px;
   overflow: hidden;
-  height: 230px;
+  height: 270px;
 }
 
 #main-search-results h4 {
@@ -193,7 +209,7 @@ input::placeholder {
   font-family: "Roboto Condensed";
   font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 33px;
   letter-spacing: 0.4px;
 }
 
@@ -205,12 +221,24 @@ input::placeholder {
   letter-spacing: 0.3px;
 }
 
+.degrees {
+  color: black;
+}
+
 #temperature,
 #wind,
 #humidity,
 #uv-index {
   color: black;
   font-weight: 700;
+}
+
+#uv-index {
+  background-color: var(--accent-drk-yellow);
+  padding: 4px 8px 2px 8px;
+  border-radius: 5px;
+  /* box-shadow: var(--text-shadow); */
+  border: 1px solid var(--accent-color-white);
 }
 
 #forecast-subhead {
@@ -228,7 +256,8 @@ input::placeholder {
   height: 170px;
 }
 
-#forecast-card {
+.forecast-card {
+  height: 200px;
   width: 140px;
   margin-top: 10px;
   background-image: var(--background-image-gradient);
@@ -238,6 +267,15 @@ input::placeholder {
 .date-goes-here {
   color: var(--accent-color-white);
   font-size: 18px;
+}
+
+#w-icon img {
+  margin-top: 5px;
+  padding: 4px;
+  background-image: var(--weather-circle-gradient);
+  width: 45px;
+  border-radius: 50%;
+  border: 3px solid var(--accent-md-blue);
 }
 
 .forecast-list-group {
@@ -286,7 +324,7 @@ input::placeholder {
     max-width: 90vw;
   }
 
-  #forecast-card {
+  .forecast-card {
     width: 42vw;
     margin: 10px;
     padding-bottom: 10px;
@@ -309,7 +347,7 @@ input::placeholder {
     justify-content: space-evenly;
   }
 
-  #forecast-card {
+  .forecast-card {
     height: 160px;
     width: 90vw;
     margin: 10px;
