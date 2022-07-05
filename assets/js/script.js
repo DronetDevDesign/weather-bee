@@ -24,6 +24,8 @@ var onSearchSubmit = function(event) {
       .then(function(data) {
 
 // ******** date goes hear ********
+  var date = dayjs().format("dddd, MM/DD/YYYY").toString();
+  document.getElementById("current-date").innerText = date; 
 
         console.log(data.main);
 
@@ -46,7 +48,7 @@ var onSearchSubmit = function(event) {
           var forecastDay = res.daily[day];
           card.querySelector("#w-icon").innerHTML = `<img src="./icons/${forecastDay.weather[0].icon}.png">`;
           card.querySelector("#temperature").innerText = Math.floor(forecastDay.temp.day);
-          card.querySelector("#wind").innerText = forecastDay.wind.day + " MPH";
+          // card.querySelector("#wind").innerText = forecastDay.wind.day + " MPH";
           // card.querySelector("#humidity").innerText = forecastDay.humidity.day;
           console.log(day);
         }
