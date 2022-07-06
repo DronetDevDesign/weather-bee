@@ -238,7 +238,7 @@ input::placeholder {
 }
 
 .uv-levels {
-  background-color: var(--accent-drk-yellow);
+  background-color: #00e200;
   padding: 4px 8px 2px 8px;
   border-radius: 5px;
   border: 1px solid var(--accent-color-white);

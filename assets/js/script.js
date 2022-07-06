@@ -2,13 +2,6 @@
 var cityUrl = "https://api.openweathermap.org/geo/1.0/direct?limit=5&appid=e0c79796705c396d02d89d49c8fdba43";
 var key = "e0c79796705c396d02d89d49c8fdba43";
 var fiveDayArray = [1, 2, 3, 4, 5];
-// var day1 = document.getElementById("forecast-date-results-1");
-// var day2 = document.getElementById("forecast-date-results-2");
-// var day3 = document.getElementById("forecast-date-results-3");
-// var day4 = document.getElementById("forecast-date-results-4");
-// var day5 = document.getElementById("forecast-date-results-5");
-// var datesForAllDays = ["day1", "day2", "day3", "day4", "day5"];
-// console.log(datesForAllArrays);
 var mainResultEl = document.querySelector("#main-section-result");
 var weatherIcon = document.querySelector(".weather-icon");
 var temp = document.getElementById("temperature");
@@ -51,19 +44,19 @@ var onSearchSubmit = function(event) {
         var uvData = res.current.uvi;
         if (uvData <= 2.9) {
           var normal = document.querySelector(".uv-levels");
-          normal.setAttribute("style", "background-color:#009400;");
+          normal.setAttribute("style", "background-color:#00e200;");
         } else if (uvData >= 3.0 && uvData <= 5.9) {
           var aboveNormal = document.querySelector(".uv-levels");
-          aboveNormal.setAttribute("style", "background-color:#e99700;");
+          aboveNormal.setAttribute("style", "background-color:#fee736;");
         } else if (uvData >= 6.0 && uvData <= 7.9) {
           var high = document.querySelector(".uv-levels");
-          high.setAttribute("style", "background-color:#ffdd00;");
+          high.setAttribute("style", "background-color:#ffa909;");
         } else if (uvData >= 8.0 && uvData <= 9.9) {
           var veryHigh = document.querySelector(".uv-levels");
-          veryHigh.setAttribute("style", "background-color:#eb0000;");
+          veryHigh.setAttribute("style", "background-color:#fd0b57;");
         } else if (uvData >= 10.0) {
           var extreme = document.querySelector(".uv-levels");
-          extreme.setAttribute("style", "background-color:#b604fd;");
+          extreme.setAttribute("style", "background-color:#c32aff;");
         } else {
           console.log("no color");
         };
@@ -88,10 +81,6 @@ var onSearchSubmit = function(event) {
         for (var i = 0; i < fiveDayArray.length; i++) {
             dailyForecast(fiveDayArray[i]);
         }
-
-        // for (var i = 0; i < fiveDays.length; i++) {
-        //   dailyForecast(fiveDays[i]);
-        // }
   
         console.log(res.daily[0]);
     });
