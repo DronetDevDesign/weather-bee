@@ -2,6 +2,13 @@
 var cityUrl = "https://api.openweathermap.org/geo/1.0/direct?limit=5&appid=e0c79796705c396d02d89d49c8fdba43";
 var key = "e0c79796705c396d02d89d49c8fdba43";
 var fiveDayArray = [1, 2, 3, 4, 5];
+// var day1 = document.getElementById("forecast-date-results-1");
+// var day2 = document.getElementById("forecast-date-results-2");
+// var day3 = document.getElementById("forecast-date-results-3");
+// var day4 = document.getElementById("forecast-date-results-4");
+// var day5 = document.getElementById("forecast-date-results-5");
+// var datesForAllDays = ["day1", "day2", "day3", "day4", "day5"];
+// console.log(datesForAllArrays);
 var mainResultEl = document.querySelector("#main-section-result");
 var weatherIcon = document.querySelector(".weather-icon");
 var temp = document.getElementById("temperature");
@@ -11,6 +18,7 @@ var uv = document.getElementById("uv-index");
 var date = document.getElementById("current-date");
 var icon = "https://openweathermap.org/img/w/";
 var searchForm = document.getElementById("user-search");
+
 
 // get weather data:
 var onSearchSubmit = function(event) {
@@ -23,9 +31,9 @@ var onSearchSubmit = function(event) {
   })
       .then(function(data) {
 
-// ******** date goes hear ********
-  var date = dayjs(date).format("dddd, MM/DD/YYYY").toString();
-  document.getElementById("current-date").innerText = date; 
+// ******** dateJS goes hear ********
+  // var date = dayjs(new Date()).format("dddd, MM/DD/YYYY").toString();
+  // document.getElementById("current-date").innerText = date; 
 
         console.log(data.main);
 
@@ -36,6 +44,8 @@ var onSearchSubmit = function(event) {
       .then((response) => response.json())
       .then((res) => {
         mainResultEl.innerText = data.name;
+        var date = dayjs(new Date()).format("dddd, MM/DD/YYYY").toString();
+          document.getElementById("current-date").innerText = date; 
         weatherIcon.innerHTML = `<img src="./icons/${data.weather[0].icon}.png">`;
         temp.innerText = Math.floor(data.main.temp);
         wind.innerText = data['wind']['speed'] + " MPH";
@@ -46,18 +56,25 @@ var onSearchSubmit = function(event) {
         var dailyForecast = function(day) {
           var card = document.getElementById("day" + day);
           var forecastDay = res.daily[day];
+          // console.log(forecastDay);
+          var fiveDays = dayjs(new Date()).format("MM/DD/YYYY").toString();
+            document.querySelectorAll(".date-goes-here").innerText = date; 
           card.querySelector("#w-icon").innerHTML = `<img src="./icons/${forecastDay.weather[0].icon}.png">`;
           card.querySelector("#temperature").innerText = Math.floor(forecastDay.temp.day);
-          // card.querySelector("#wind").innerText = forecastDay.wind.day + " MPH";
-          // card.querySelector("#humidity").innerText = forecastDay.humidity.day;
-          console.log(day);
+          card.querySelector("#wind").innerText = Math.floor(forecastDay.wind_speed) + " MPH";
+          card.querySelector("#humidity").innerText = forecastDay.humidity;
+          // console.log(forecastDay.wind);
         }
         
         for (var i = 0; i < fiveDayArray.length; i++) {
             dailyForecast(fiveDayArray[i]);
         }
 
-// ******** date goes hear ********
+        // for (var i = 0; i < fiveDays.length; i++) {
+        //   dailyForecast(fiveDays[i]);
+        // }
+
+// ******** dateJS goes hear ********
       
         console.log(res.daily[0]);
     });

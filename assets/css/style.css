@@ -42,7 +42,7 @@ html {
 body {
   font-family: 'Alatsi', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: var(--background-body-gradient);
-  height: 1000px;
+  height: 1000;
   padding-bottom: 75px;
 }
 
@@ -188,7 +188,7 @@ input::placeholder {
 }
 
 .main-heading {
-  font-size: 24px;
+  font-size: 38px;
 }
 
 #main-icon > img {
@@ -201,7 +201,7 @@ input::placeholder {
   background-image: var(--background-lt-blue-gradient);
   border-radius: 5px;
   overflow: hidden;
-  height: 270px;
+  height: 320px;
 }
 
 #main-search-results h4 {
@@ -219,6 +219,10 @@ input::placeholder {
   padding: 5px 8px;
   font-size: 14px;
   letter-spacing: 0.3px;
+}
+
+#current-date {
+  font-size: 24px;
 }
 
 .degrees {
@@ -257,7 +261,7 @@ input::placeholder {
 }
 
 .forecast-card {
-  height: 200px;
+  height: 190px;
   width: 140px;
   margin-top: 10px;
   background-image: var(--background-image-gradient);
@@ -272,7 +276,8 @@ input::placeholder {
 #w-icon img {
   margin-top: 5px;
   padding: 4px;
-  background-image: var(--weather-circle-gradient);
+  /* background-image: var(--weather-circle-gradient); */
+  background-color: var(--accent-color-white);
   width: 45px;
   border-radius: 50%;
   border: 3px solid var(--accent-md-blue);
@@ -315,7 +320,7 @@ input::placeholder {
 
   body {
     background-image: var(--background-body-gradient);
-    height: 1150px;
+    height: 1425px;
   }
 
   #section-one-results {
@@ -334,7 +339,7 @@ input::placeholder {
 @media (max-width: 575px) {
   body {
     background-image: var(--background-body-gradient);
-    height: 1600px;
+    height: 1850px;
   }
 
   .main-container {
@@ -348,7 +353,7 @@ input::placeholder {
   }
 
   .forecast-card {
-    height: 160px;
+    height: 190px;
     width: 90vw;
     margin: 10px;
     padding-bottom: 10px;
