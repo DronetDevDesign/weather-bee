@@ -42,8 +42,8 @@ html {
 body {
   font-family: 'Alatsi', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: var(--background-body-gradient);
-  height: 1000;
-  padding-bottom: 75px;
+  height: 100%;
+  padding-bottom: 125px;
 }
 
 header {
@@ -237,6 +237,7 @@ input::placeholder {
   font-weight: 700;
 }
 
+/* START > UV COLOR CODES: */
 #uv-index {
   background-color: var(--accent-drk-yellow);
   padding: 4px 8px 2px 8px;
@@ -244,6 +245,27 @@ input::placeholder {
   /* box-shadow: var(--text-shadow); */
   border: 1px solid var(--accent-color-white);
 }
+
+.uv-low {
+  background-color: #009400;
+}
+
+.uv-normal {
+  background-color: #ffdd00;
+}
+
+.uv-above-normal {
+  background-color: #e99700;  
+}
+
+.uv-danger {
+  background-color: #d40000;
+}
+
+.extreme {
+  background-color: #af00f4;
+}
+/* END > UV COLOR CODES: */
 
 #forecast-subhead {
   font-size: 21px;

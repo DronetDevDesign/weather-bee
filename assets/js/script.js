@@ -30,12 +30,7 @@ var onSearchSubmit = function(event) {
       return response.json();
   })
       .then(function(data) {
-
-// ******** dateJS goes hear ********
-  // var date = dayjs(new Date()).format("dddd, MM/DD/YYYY").toString();
-  // document.getElementById("current-date").innerText = date; 
-
-        console.log(data.main);
+      console.log(data.main);
 
   var lat = data.coord.lat;
   var lon = data.coord.lon;
@@ -44,21 +39,42 @@ var onSearchSubmit = function(event) {
       .then((response) => response.json())
       .then((res) => {
         mainResultEl.innerText = data.name;
+
         var date = dayjs(new Date()).format("dddd, MM/DD/YYYY").toString();
-          document.getElementById("current-date").innerText = date; 
+          document.getElementById("current-date").innerText = date;
+
         weatherIcon.innerHTML = `<img src="./icons/${data.weather[0].icon}.png">`;
         temp.innerText = Math.floor(data.main.temp);
         wind.innerText = data['wind']['speed'] + " MPH";
         hum.innerText = data.main.humidity + "%";
         uv.innerText = res.current.uvi;
+        if (uv <= 2) {
+          var normal = document.getElementsByClassName("uv-levels");
+          normal.style.backgroundColor = "#009400";
+        } else if (uvi === 3 || uvi === 4 || uvi === 5) {
+          var aboveNormal = document.getElementsByClassName("uv-levels");
+          aboveNormal.style.backgroundColor = "#ffdd00";
+        } else if (uvi === 6 || uvi === 7) {
+          var high = document.getElementsByClassName("uv-levels");
+          high.style.backgroundColor = "#e99700";
+        } else if (uvi === 8 || uvi === 9) {
+          var veryHigh = document.getElementsByClassName("uv-levels");
+          veryHigh.style.backgroundColor = "#d40000";
+        } else {
+          var extreme = document.getElementsByClassName("uv-levels");
+          extreme.style.backgroundColor = "#af00f4";
+        }
+        
         console.log(res);
 
         var dailyForecast = function(day) {
           var card = document.getElementById("day" + day);
           var forecastDay = res.daily[day];
           // console.log(forecastDay);
+
           var fiveDays = dayjs(new Date()).format("MM/DD/YYYY").toString();
-            document.querySelectorAll(".date-goes-here").innerText = date; 
+            document.querySelectorAll(".date-goes-here").innerText = date;
+
           card.querySelector("#w-icon").innerHTML = `<img src="./icons/${forecastDay.weather[0].icon}.png">`;
           card.querySelector("#temperature").innerText = Math.floor(forecastDay.temp.day);
           card.querySelector("#wind").innerText = Math.floor(forecastDay.wind_speed) + " MPH";
@@ -73,9 +89,7 @@ var onSearchSubmit = function(event) {
         // for (var i = 0; i < fiveDays.length; i++) {
         //   dailyForecast(fiveDays[i]);
         // }
-
-// ******** dateJS goes hear ********
-      
+  
         console.log(res.daily[0]);
     });
 
