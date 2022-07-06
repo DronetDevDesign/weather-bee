@@ -239,7 +239,7 @@ input::placeholder {
 
 /* START > UV COLOR CODES: */
 #uv-index {
-  background-color: var(--accent-drk-yellow);
+  background-color: #ffdd00;
   padding: 4px 8px 2px 8px;
   border-radius: 5px;
   /* box-shadow: var(--text-shadow); */
@@ -259,11 +259,11 @@ input::placeholder {
 }
 
 .uv-danger {
-  background-color: #d40000;
+  background-color: #eb0000;
 }
 
 .extreme {
-  background-color: #af00f4;
+  background-color: #b604fd;
 }
 /* END > UV COLOR CODES: */
 

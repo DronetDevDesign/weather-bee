@@ -51,21 +51,21 @@ var onSearchSubmit = function(event) {
         if (uv <= 2) {
           var normal = document.getElementsByClassName("uv-levels");
           normal.style.backgroundColor = "#009400";
-        } else if (uvi === 3 || uvi === 4 || uvi === 5) {
+        } else if (uv >= 3 || uv <= 5) {
           var aboveNormal = document.getElementsByClassName("uv-levels");
           aboveNormal.style.backgroundColor = "#ffdd00";
-        } else if (uvi === 6 || uvi === 7) {
+        } else if (uv >= 6 || uv <= 7) {
           var high = document.getElementsByClassName("uv-levels");
           high.style.backgroundColor = "#e99700";
-        } else if (uvi === 8 || uvi === 9) {
+        } else if (uv >= 8 || uv <= 9) {
           var veryHigh = document.getElementsByClassName("uv-levels");
-          veryHigh.style.backgroundColor = "#d40000";
-        } else {
+          veryHigh.style.backgroundColor = "#eb0000";
+        } else if (uv >= 10) {
           var extreme = document.getElementsByClassName("uv-levels");
-          extreme.style.backgroundColor = "#af00f4";
+          extreme.style.backgroundColor = "#b604fd";
         }
-        
-        console.log(res);
+
+         console.log(res);
 
         var dailyForecast = function(day) {
           var card = document.getElementById("day" + day);
