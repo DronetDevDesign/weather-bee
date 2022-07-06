@@ -62,7 +62,7 @@ var onSearchSubmit = function(event) {
           card.querySelector("#w-icon").innerHTML = `<img src="./icons/${forecastDay.weather[0].icon}.png">`;
           card.querySelector("#temperature").innerText = Math.floor(forecastDay.temp.day);
           card.querySelector("#wind").innerText = Math.floor(forecastDay.wind_speed) + " MPH";
-          card.querySelector("#humidity").innerText = forecastDay.humidity;
+          card.querySelector("#humidity").innerText = forecastDay.humidity + "%";
           // console.log(forecastDay.wind);
         }
         
