@@ -42,16 +42,16 @@ var onSearchSubmit = function(event) {
         hum.innerText = data.main.humidity + "%";
         uv.innerText = res.current.uvi;
         var uvData = res.current.uvi;
-        if (uvData <= 2.9) {
+        if (uvData <= 2.99) {
           var normal = document.querySelector(".uv-levels");
           normal.setAttribute("style", "background-color:#00e200;");
-        } else if (uvData >= 3.0 && uvData <= 5.9) {
+        } else if (uvData >= 3.0 && uvData <= 5.99) {
           var aboveNormal = document.querySelector(".uv-levels");
           aboveNormal.setAttribute("style", "background-color:#fee736;");
-        } else if (uvData >= 6.0 && uvData <= 7.9) {
+        } else if (uvData >= 6.0 && uvData <= 7.99) {
           var high = document.querySelector(".uv-levels");
           high.setAttribute("style", "background-color:#ffa909;");
-        } else if (uvData >= 8.0 && uvData <= 9.9) {
+        } else if (uvData >= 8.0 && uvData <= 9.99) {
           var veryHigh = document.querySelector(".uv-levels");
           veryHigh.setAttribute("style", "background-color:#fd0b57;");
         } else if (uvData >= 10.0) {
