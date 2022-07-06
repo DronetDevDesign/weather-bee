@@ -48,19 +48,20 @@ var onSearchSubmit = function(event) {
         wind.innerText = data['wind']['speed'] + " MPH";
         hum.innerText = data.main.humidity + "%";
         uv.innerText = res.current.uvi;
-        if (uv <= 2) {
+        var uvData = res.current.uvi;
+        if (uvData <= 2.9) {
           var normal = document.querySelector(".uv-levels");
           normal.setAttribute("style", "background-color:#009400;");
-        } else if (uv >= 3 && uv <= 5) {
+        } else if (uvData >= 3.0 && uvData <= 5.9) {
           var aboveNormal = document.querySelector(".uv-levels");
-          aboveNormal.setAttribute("style", "background-color:#ffdd00;");
-        } else if (uv >= 6 && uv <= 7) {
+          aboveNormal.setAttribute("style", "background-color:#e99700;");
+        } else if (uvData >= 6.0 && uvData <= 7.9) {
           var high = document.querySelector(".uv-levels");
-          high.setAttribute("style", "background-color:#e99700;");
-        } else if (uv >= 8 && uv <= 9) {
+          high.setAttribute("style", "background-color:#ffdd00;");
+        } else if (uvData >= 8.0 && uvData <= 9.9) {
           var veryHigh = document.querySelector(".uv-levels");
           veryHigh.setAttribute("style", "background-color:#eb0000;");
-        } else if (uv >= 10) {
+        } else if (uvData >= 10.0) {
           var extreme = document.querySelector(".uv-levels");
           extreme.setAttribute("style", "background-color:#b604fd;");
         } else {
