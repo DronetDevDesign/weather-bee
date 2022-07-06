@@ -7,6 +7,7 @@
 :root {
   --background-color: #eeeeee;
   --accent-color-white: #ffffff;
+  --accent-color-black: #000000;
   --accent-transparent-white: #ffffffd1;
   --accent-lt-blue: #ecfbff;
   --pale-blue: #9be8ff;
@@ -233,39 +234,16 @@ input::placeholder {
 #wind,
 #humidity,
 #uv-index {
-  color: black;
+  color: var(--accent-color-black);
   font-weight: 700;
 }
 
-/* START > UV COLOR CODES: */
 #uv-index {
-  background-color: #ffdd00;
+  background-color: var(--accent-drk-yellow);
   padding: 4px 8px 2px 8px;
   border-radius: 5px;
-  /* box-shadow: var(--text-shadow); */
   border: 1px solid var(--accent-color-white);
 }
-
-.uv-low {
-  background-color: #009400;
-}
-
-.uv-normal {
-  background-color: #ffdd00;
-}
-
-.uv-above-normal {
-  background-color: #e99700;  
-}
-
-.uv-danger {
-  background-color: #eb0000;
-}
-
-.extreme {
-  background-color: #b604fd;
-}
-/* END > UV COLOR CODES: */
 
 #forecast-subhead {
   font-size: 21px;
@@ -298,7 +276,6 @@ input::placeholder {
 #w-icon img {
   margin-top: 5px;
   padding: 4px;
-  /* background-image: var(--weather-circle-gradient); */
   background-color: var(--accent-color-white);
   width: 45px;
   border-radius: 50%;
@@ -324,6 +301,8 @@ input::placeholder {
 #forecast-list-elements h5 span {
   color: var(--accent-drk-yellow);
 }
+
+/* ========== MEDIA QUERIES SECTIONS: ========== */
 
 @media (max-width: 1189px) {
   #search-container {
