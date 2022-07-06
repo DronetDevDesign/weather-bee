@@ -1,4 +1,4 @@
-# weather-bee
+# Welcome to the WeatherBee app!
 The weather has been quite the buzz lately! Find out why on WeatherBee
 
 ## Purpose:
