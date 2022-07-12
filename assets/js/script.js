@@ -11,7 +11,26 @@ var uv = document.getElementById("uv-index");
 var date = document.getElementById("current-date");
 var icon = "https://openweathermap.org/img/w/";
 var searchForm = document.getElementById("user-search");
+var cityArray = [];
 
+var loadCities = function() {
+  var getCities = JSON.parse(localStorage.getItem("cityName"));
+  console.log(getCities);
+
+  for (var i = 0; i < getCities.length; i++) {
+    var loadCityBtn = document.createElement("button");
+    loadCityBtn.className = "btn";
+    loadCityBtn.style.marginTop = "22px";
+    loadCityBtn.style.color = "white";
+    loadCityBtn.style.fontSize = "16px";
+    loadCityBtn.style.letterSpacing = "1px";
+    loadCityBtn.style.backgroundColor = "#4fa1dc";
+    loadCityBtn.textContent = getCities[i];
+    document.getElementById("search").appendChild(loadCityBtn);
+  }
+}
+
+// >>>>>> create another function to run the savd city button when clicked <<<<<<<
 
 // get weather data:
 var onSearchSubmit = function(event) {
@@ -20,6 +39,9 @@ var onSearchSubmit = function(event) {
 
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${fData.get("cityname")}&units=imperial&appid=${key}`)
       .then(function(response) {
+        cityArray.push(fData.get("cityname"));
+        localStorage.setItem("cityName", JSON.stringify(cityArray)); // key gives acces - "cityName" 
+        console.log(cityArray);
       return response.json();
   })
       .then(function(data) {
@@ -33,13 +55,13 @@ var onSearchSubmit = function(event) {
       .then((res) => {
         mainResultEl.innerText = data.name;
 
-        var date = dayjs(new Date()).format("dddd, MM/DD/YYYY").toString();
+        var date = dayjs(new Date()).format("dddd, MM/DD/YYYY").toString(); // single day
           document.getElementById("current-date").innerText = date;
 
         weatherIcon.innerHTML = `<img src="./icons/${data.weather[0].icon}.png">`;
         temp.innerText = Math.floor(data.main.temp);
         wind.innerText = data['wind']['speed'] + " MPH";
-        hum.innerText = data.main.humidity + "%";
+        hum.innerText = data.main.humidity + "%"; 
         uv.innerText = res.current.uvi;
         var uvData = res.current.uvi;
         if (uvData <= 2.99) {
@@ -68,7 +90,7 @@ var onSearchSubmit = function(event) {
           var forecastDay = res.daily[day];
           // console.log(forecastDay);
 
-          var fiveDays = dayjs(new Date()).format("MM/DD/YYYY").toString();
+          var fiveDays = dayjs(new Date()).format("MM/DD/YYYY").toString(); // five day forecast
             document.querySelectorAll(".date-goes-here").innerText = date;
 
           card.querySelector("#w-icon").innerHTML = `<img src="./icons/${forecastDay.weather[0].icon}.png">`;
@@ -104,3 +126,4 @@ var onSearchSubmit = function(event) {
 
 // search city button submitted:
 searchForm.addEventListener("submit", onSearchSubmit);
+loadCities();
