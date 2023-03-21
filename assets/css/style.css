@@ -42,8 +42,8 @@ html {
 body {
   font-family: 'Alatsi', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: var(--background-body-gradient);
-  height: 100vh;
-  padding-bottom: 125px;
+  height: 100%;
+  background-repeat: no-repeat;
 }
 
 header {
@@ -257,6 +257,7 @@ input::placeholder {
   justify-content: space-between;
   flex-wrap: wrap;
   height: auto;
+  margin-bottom: 65px;
 }
 
 .forecast-card {
@@ -278,7 +279,7 @@ input::placeholder {
 .forecast {
   position: relative;
   color: var(--accent-lighter-blue);
-  font-weight: 300;
+  font-weight: 100;
   font-size: 16px;
   letter-spacing: .2rem;
 }
@@ -287,7 +288,7 @@ input::placeholder {
   margin-top: 7px;
   padding: 4px;
   background-color: var(--accent-color-white);
-  width: 55px;
+  width: 65px;
   border-radius: 50%;
   border: 3px solid var(--accent-md-blue);
   text-align: center;
@@ -316,66 +317,68 @@ input::placeholder {
 
 /* ========== MEDIA QUERIES SECTIONS: ========== */
 
-@media (max-width: 1189px) {
-  #search-container {
-    width: 800px;
-    margin: auto;
-    display: block;
-    justify-content: center;
+@media (max-width: 1200px) {
+#search-container {
+  width: 800px;
+  margin: auto;
+  display: block;
+  justify-content: center;
   }
 
   #results-container {
-    margin-left: 0;
+  margin-left: 0;
   }
 }
 
 @media (max-width: 768px) {
-
-  body {
-    background-image: var(--background-body-gradient);
-    height: 1425px;
+#section-one-results {
+  display: block;
+  margin: 0 auto;
+  max-width: 90vw;
   }
 
-  #section-one-results {
-    display: block;
-    margin: 0 auto;
-    max-width: 90vw;
+.forecast-card {
+  width: 335px;
+  padding: 5px 10px 15px 12px;
+  margin-bottom: 10px;
   }
 
-  .forecast-card {
-    width: 42vw;
-    margin: 10px;
-    padding-bottom: 10px;
+.forecast {
+  position: relative;
+  color: var(--accent-lighter-blue);
+  font-weight: 100;
+  font-size: 22px;
+  letter-spacing: .2rem;
+  margin-left: 10px;
+  }
+
+#w-icon img {
+  margin-top: 10px;
   }
 }
 
 @media (max-width: 575px) {
-  body {
-    background-image: var(--background-body-gradient);
-    height: 1850px;
+.main-container {
+  padding-bottom: 75px;
   }
 
-  .main-container {
-    padding-bottom: 75px;
+#forecast-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   }
 
-  #forecast-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.forecast-card {
+  height: 190px;
+  width: 90vw;
+  margin: 10px;
+  padding-bottom: 10px;
   }
 
-  .forecast-card {
-    height: 190px;
-    width: 90vw;
-    margin: 10px;
-    padding-bottom: 10px;
-  }
-
-  #forecast-subhead {
-    margin: 25px auto 0 auto;
-    text-align: center;
-    justify-content: center;
+#forecast-subhead {
+  margin: 25px auto 0 auto;
+  text-align: center;
+  justify-content: center;
   }
 }
 
