@@ -10,15 +10,20 @@ Fun and easy way to check out the weather if you're going to travel or have outd
 </div>
 <br>
 
+## Website Link:
+## https://dronetdevdesign.github.io/weather-bee/
+
+<br>
+
 ## Viewable Responsive Screen Sizes:
 * Desktop: 2000px
 * Media Query Sizes:
-  - 1189px (Desktop - laptops)
+  - 1200px (Desktop - laptops)
   - 768px (Laptop - tablets)
-  - 575px (Small devices - large cell phones)
+  - 575px 430px (Small devices - large cell phones)
+  - 390px (Small cell phones)
 
-## Website Link:
-https://dronetdevdesign.github.io/weather-bee/
+<br>
 
 ## This Website Created Using:
 * JavaScript
@@ -27,8 +32,12 @@ https://dronetdevdesign.github.io/weather-bee/
 * HTML
 * CSS
 
+<br>
+
 ## Graphic Software Used:
 * Adobe Photoshop:
+
+<br>
 
 ## Contribution:
 Ron Dronet - Full-stack Developer and Graphic Designer
