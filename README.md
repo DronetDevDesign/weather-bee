@@ -5,13 +5,21 @@ The weather has been quite the buzz lately! Find out why on WeatherBee
 Fun and easy way to check out the weather if you're going to travel or have outdoor activities planned.
 
 <br>
-<div align="left">
-    <img src="./assets/images/waether-bee-screenshot.jpg" width="800px" /> 
-</div>
-<br>
 
 ## Website Link:
 ## https://dronetdevdesign.github.io/weather-bee/
+
+<br>
+
+## **Table of contents:**
+- [Usage](#usage)
+- [Contribution](#contribution)
+- [Questions](#questions)
+
+<br>
+<div align="left">
+    <img src="./assets/images/waether-bee-screenshot.jpg" width="800px" /> 
+</div>
 
 <br>
 
@@ -35,9 +43,23 @@ Fun and easy way to check out the weather if you're going to travel or have outd
 <br>
 
 ## Graphic Software Used:
-* Adobe Photoshop:
+* Adobe Photoshop
+* Adobe Illustrator
+
+<br>
+
+## Usage:
+### The respository can be cloned and placed in a folder remotely.
 
 <br>
 
 ## Contribution:
 Ron Dronet - Full-stack Developer and Graphic Designer
+
+<br>
+
+## Questions?
+### If you have any questions here's how to contact me:
+- Username: DronetDevDesign
+- Repository: https://github.com/DronetDevDesign/mercedes-binge-app
+- Email: ron@DronetDevDesign.com
