@@ -13,24 +13,25 @@ var icon = "https://openweathermap.org/img/w/";
 var searchForm = document.getElementById("user-search");
 var cityArray = [];
 
-var loadCities = function() {
-  var getCities = JSON.parse(localStorage.getItem("cityName"));
-  console.log(getCities);
+// ADD CITY TO LIST:
+// var loadCities = function() {
+//   var getCities = JSON.parse(localStorage.getItem("cityName"));
+//   console.log(getCities);
 
-  for (var i = 0; i < getCities.length; i++) {
-    var loadCityBtn = document.createElement("button");
-    loadCityBtn.className = "btn";
-    loadCityBtn.style.marginTop = "11px";
-    loadCityBtn.style.color = "white";
-    loadCityBtn.style.fontSize = "16px";
-    loadCityBtn.style.letterSpacing = "1px";
-    loadCityBtn.style.backgroundColor = "#4fa1dc";
-    loadCityBtn.textContent = getCities[i];
-    document.getElementById("search").appendChild(loadCityBtn);
-  }
-}
+//   for (var i = 0; i < getCities.length; i++) {
+//     var loadCityBtn = document.createElement("button");
+//     loadCityBtn.className = "btn";
+//     loadCityBtn.style.marginTop = "11px";
+//     loadCityBtn.style.color = "white";
+//     loadCityBtn.style.fontSize = "16px";
+//     loadCityBtn.style.letterSpacing = "1px";
+//     loadCityBtn.style.backgroundColor = "#4fa1dc";
+//     loadCityBtn.textContent = getCities[i];
+//     document.getElementById("search").appendChild(loadCityBtn);
+//   }
+// }
+// >>>>>> create another function to run the saved city button when clicked <<<<<<<
 
-// >>>>>> create another function to run the savd city button when clicked <<<<<<<
 
 // get weather data:
 var onSearchSubmit = function(event) {
@@ -126,4 +127,4 @@ var onSearchSubmit = function(event) {
 
 // search city button submitted:
 searchForm.addEventListener("submit", onSearchSubmit);
-loadCities();
+// loadCities();

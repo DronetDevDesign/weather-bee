@@ -256,29 +256,42 @@ input::placeholder {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  height: 170px;
+  height: auto;
 }
 
 .forecast-card {
-  height: 190px;
+  height: auto;
   width: 140px;
   margin-top: 10px;
   background-image: var(--background-image-gradient);
   border-radius: 5px;
+  padding-bottom: 10px;
 }
 
 .date-goes-here {
+  display: flex;
+  flex-wrap: wrap;
   color: var(--accent-color-white);
-  font-size: 18px;
+  font-size: 22px;
+}
+
+.forecast {
+  position: relative;
+  color: var(--accent-lighter-blue);
+  font-weight: 300;
+  font-size: 16px;
+  letter-spacing: .2rem;
 }
 
 #w-icon img {
-  margin-top: 5px;
+  margin-top: 7px;
   padding: 4px;
   background-color: var(--accent-color-white);
-  width: 45px;
+  width: 55px;
   border-radius: 50%;
   border: 3px solid var(--accent-md-blue);
+  text-align: center;
+  justify-content: center;
 }
 
 .forecast-list-group {
