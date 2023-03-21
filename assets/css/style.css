@@ -433,12 +433,9 @@ footer span {
 
 @media (max-width: 390px) {
 #bee-icon {
+  position: relative;
   top: -24px;
-  right: -295px;
-  }
-
-.logo-container {
-  left: -34px;
+  right: -310px;
   }
 
 .logo {
