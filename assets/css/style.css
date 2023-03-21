@@ -177,6 +177,7 @@ input::placeholder {
 
 #main-search-results {
   padding: 10px 15px;
+  height: auto;
 }
 
 #heading-icon-container {
@@ -201,7 +202,7 @@ input::placeholder {
   background-image: var(--background-lt-blue-gradient);
   border-radius: 5px;
   overflow: hidden;
-  height: 320px;
+  height: auto;
 }
 
 #main-search-results h4 {
@@ -315,6 +316,34 @@ input::placeholder {
   color: var(--accent-drk-yellow);
 }
 
+footer {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.weatherbee-app {
+  font-size: 28px;
+  color: var(--accent-drk-blue);
+}
+
+footer p {
+  position: relative;
+  font-size: 18px;
+  opacity: 60%;
+  font-weight: 200;
+}
+
+footer span {
+  position: relative;
+  font-size: 20px;
+  margin-right: 2px;
+  top: 1px;
+}
+
 /* ========== MEDIA QUERIES SECTIONS: ========== */
 
 @media (max-width: 1200px) {
@@ -358,10 +387,6 @@ input::placeholder {
 }
 
 @media (max-width: 575px) {
-.main-container {
-  padding-bottom: 75px;
-  }
-
 #forecast-container {
   display: flex;
   flex-wrap: wrap;
@@ -369,16 +394,65 @@ input::placeholder {
   }
 
 .forecast-card {
-  height: 190px;
+  height: auto;
   width: 90vw;
   margin: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 15px;
   }
 
 #forecast-subhead {
   margin: 25px auto 0 auto;
   text-align: center;
   justify-content: center;
+  }
+}
+
+@media (max-width: 430px) {
+#bee-icon {
+  right: -324px;
+  }
+
+.logo-container {
+  left: -34px;
+  }
+
+.logo {
+  font-size: 60px;
+  }
+
+#bee {
+  font-size: 68px;
+  }
+
+.subhead {
+  top: 105px;
+  font-size: 19px;
+  font-weight: 600;
+  }
+}
+
+@media (max-width: 390px) {
+#bee-icon {
+  top: -24px;
+  right: -295px;
+  }
+
+.logo-container {
+  left: -34px;
+  }
+
+.logo {
+  font-size: 55px;
+  margin: 15px 0 43px 0;
+  }
+
+#bee {
+  font-size: 60px;
+  }
+
+.subhead {
+  top: 95px;
+  font-size: 18px;
   }
 }
 
