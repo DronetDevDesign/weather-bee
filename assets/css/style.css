@@ -434,6 +434,7 @@ footer span {
 @media (max-width: 390px) {
 #bee-icon {
   position: relative;
+  width: 35px;
   top: -24px;
   right: -310px;
   }
@@ -441,6 +442,7 @@ footer span {
 .logo {
   font-size: 55px;
   margin: 15px 0 43px 0;
+  letter-spacing: 0px;
   }
 
 #bee {
