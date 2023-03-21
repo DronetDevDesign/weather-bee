@@ -42,7 +42,7 @@ html {
 body {
   font-family: 'Alatsi', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   background-image: var(--background-body-gradient);
-  height: 100%;
+  height: 100vh;
   padding-bottom: 125px;
 }
 
