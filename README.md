@@ -1,8 +1,8 @@
 # Welcome to the WeatherBee app!
-The weather has been quite the buzz lately! Find out why on WeatherBee
+The weather has been quite the buzz lately! Find out why on the WeatherBee app!
 
 ## Purpose:
-Fun and easy way to check out the weather if you're going to travel or have outdoor activities planned.
+Fun and easy way to check out the weather if you're going to travel or have outdoor activities planned. This app also gives you a five day forecast!
 
 <br>
 
